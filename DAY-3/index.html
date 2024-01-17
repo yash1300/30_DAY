@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Another methhod to drag and drop just the javascript part -->
+
+    <!-- let Items = document.getElementById("Elements")
+    let leftBox = document.getElementById("box1")
+    let rigthBox = document.getElementById("box2")
+
+    for (element in Items){
+        element.addEventListener("Dragging", function(e){
+            let selected = e.target;
+
+            rigthBox.addEventListener("dragged", function(e){
+                e.preventDefault();
+        });
+            rigthBox.addEventListener("dropped", function(e){
+                rigthBox.appendChild(selected)
+                selected = null;
+            })
+        })
+    } -->
+    <h1>DRAG AND DROP BABYY!!!</h1>
+    <div class="container">
+        <div class="box1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="Elements" draggable="true" ondragstart="drag(event)" id="drag1">Elemnt 1</div>
+            <div class="Elements" draggable="true" ondragstart="drag(event)" id="drag2">Elemnt 2</div>
+            <div class="Elements" draggable="true" ondragstart="drag(event)" id="drag3">Elemnt 3</div>
+            <div class="Elements" draggable="true" ondragstart="drag(event)" id="drag4">Elemnt 4</div>
+        </div>
+        <div class="box2" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+    </div>
+</body>
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+      
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+      
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</html>
