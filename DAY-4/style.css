@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(240, 204, 204);
+    color: brown;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Logo{
+    height: 10vh;
+    width: 7vw;
+    padding: 2px;
+    margin: 20px;
+    cursor: pointer;
+}
+nav{
+    margin: 30px;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+nav ul{
+    list-style: none;
+    /* display: flex; */
+    margin: 0;
+    left: 50%;
+    padding: 0;
+    
+}
+nav ul li {
+    display: inline-block;
+    margin: 5px;
+    padding-right:10px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: space-around;
+    color: brown;
+}
+nav ul li a{
+    color: brown;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: black;
+}
+.me{
+    margin: 20px;
+    padding: 15px;
+    position: relative;
+
+}
+.me h1{
+    /* text-align: center; */
+    font-size: 70px;
+    width: 60vw;
+    margin-top: 40px;
+    padding: 30px;
+    font-weight: 200;
+}
+.me p,a{
+    padding: 2px;
+    width: 40vw;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.me span{
+    padding: 20px;
+    margin-left: 60%;
+    
+}
+.girl {
+    position: absolute;
+    /* z-index: 1; */
+    height: 100%;
+    top: 0;
+    right: 15%;
+
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 30%;
+    height: 100%;
+    /* z-index: 0;  */
+}
+
+button{
+    background: transparent;
+    border: rgb(11, 5, 5) solid 2px;
+    padding: 15px 20px;
+    background-color: antiquewhite;
+    color: rgb(75, 61, 42);
+    align-items: center;
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
