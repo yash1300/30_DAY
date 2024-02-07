@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI - Calculator</h1>
+        <p>to calculate your bmi enter the details below</p>
+        <div class="details">
+            <p>Enter your height:</p><input type="number" id="height" placeholder="height">
+            <p>Enter your weight:</p><input type="number" id="weight" placeholder="weight">
+            <p>Enter your age:</p><input type="number" id="age" placeholder="age">
+
+            <button id="btn" onclick=generateBmi()>Generate BMI</button>
+        </div>
+    </div>
+</body>
+<script>
+    const age = document.getElementById("age")
+    const height = document.getElementById("heigth")
+    const weight = document.getElementById("weight")
+
+    function generateBmi(age, height, weight){
+        var heightM = height / 100;
+        var bmi = weight / (heightM * heightM);
+        bmi = bmi.toFixed(2);
+
+        console.log(bmi);
+    }
+
+</script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <p>To calculate your BMI, enter the details below:</p>
+      <div class="details">
+        <p>Enter your height in meters (e.g., 1.75):</p>
+        <input type="text" id="heightInput" placeholder="Height (m)">
+        <p>Enter your weight in kilograms (e.g., 70):</p>
+        <input type="text" id="weightInput" placeholder="Weight (kg)">
+        <button id="btn">Calculate BMI</button>
+        <p id="bmiResult"></p>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("btn").addEventListener("click", function() {
+      const height = parseFloat(document.getElementById("heightInput").value);
+      const weight = parseFloat(document.getElementById("weightInput").value);
+  
+      // Validate that both height and weight are valid numbers
+      if (!isNaN(height) && !isNaN(weight) && height > 0 && weight > 0) {
+        const bmi = calculateBMI(height, weight);
+        const formattedBmi = bmi.toFixed(2);
+  
+        // Display BMI result on the webpage
+        document.getElementById("bmiResult").textContent = "Your BMI is: " + formattedBmi;
+      } else {
+        // Display error message for invalid input
+        document.getElementById("bmiResult").textContent = "Invalid input: Please enter valid numbers for height and weight.";
+      }
+    });
+  
+    // Function to calculate BMI
+    function calculateBMI(height, weight) {
+      return weight / (height * height);
+    }
+  </script>
+</html>
+
+
